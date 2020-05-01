@@ -6,14 +6,21 @@
     border: 0;
 }
 
+html {
+    position: relative; 
+    min-height: 100%;
+}
+
 body {
     font-family: 'Roboto', sans-serif;
+    margin: 0 0 112px;
 }
 
 header {
     max-width: 940px;
     margin: 30px auto 50px;
     display: flex;
+    right: 0;
     align-items: center;
 }
 
@@ -77,10 +84,10 @@ nav #page-active {
 main {
     max-width: 940px;
     margin: 0px auto 50px;
+    position: relative;
 }
 
 main h2 {
-    
     font-size: 24px;
     font-weight: bold;
     color: #111111;
@@ -99,6 +106,7 @@ main h2 {
 
 .card img {
     width: 300px;
+    max-height: 140px;
     border-radius: 15px;
 }
 
@@ -117,6 +125,8 @@ main h2 {
 }
 
 footer {
+    position: absolute;
+    bottom: 0;
     width: 100%;
     height: 62px;
     background-color: #EEEEEE;
@@ -127,67 +137,7 @@ footer {
     justify-content: center;
 }
 
-.modal-overlay {
-    background-color: rgba(0, 0, 0, 0.6);
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    top: 0;
-    opacity: 0;
-    visibility: hidden;
-    transition: 600ms;
-}
-
-.modal-overlay.active {
-    opacity: 1;
-    visibility: visible;
-    transition: 600ms;
-}
-
-.modal {
-    background-color: #fff;
-    width: 660px;
-    height: 413px;
-    border-radius: 16px;
-    margin: 15vh auto;
-    text-align: center;
-    position: relative;
-}
-
-.internal-modal {
-    position: absolute;
-    margin: 30px;
-}
-
-.modal-img {
-    width: 600px;
-    height: 200px;
-    border-radius: 15px;
-    margin-bottom: 20px;
-    background-image: url(/public/img/asinhas.png);
-}
-
-.modal h2 {
-    font-size: 24px;
-    color: #111111;
-    font-weight: 400;
-    margin-bottom: 5px;
-}
-
-.modal p {
-    font-size: 18px;
-    color: #777777;
-    text-align: center;
-    margin-bottom: 60px;
-}
-
-.close-modal {
-    font-weight: 400;
-    color: #999999;
-    font-size: 16px;
-    cursor: pointer;
-}
-
+/* === About Page Style === */
 #about h3 {
     font-size: 20px;
     font-weight: bold;
@@ -201,3 +151,95 @@ footer {
     line-height: 28px;
     margin: 20px auto 30px;
 }
+
+/* === 404 Page Style === */
+
+#erro {
+    text-align: center;
+}
+
+#erro h1 {
+    font-size: 200px;
+    font-weight: bold;
+    color: #111111;
+}
+
+#erro p {
+    color: #444444;
+    font-size: 30px;
+    line-height: 40px;
+    margin-top: 20px;
+}
+
+/* === Datails Page === */
+
+.datail-header {
+    text-align: center;
+}
+
+.datail-header img {
+    max-width: 940px;
+    max-height: 280px;
+    border-radius: 15px;
+}
+
+.datail-header h1 {
+    font-size: 36px;
+    color: #111111;
+    font-weight: bold;
+    margin: 50px 0 4px;
+}
+
+.datail-header h5 {
+    font-size: 20px;
+    font-weight: 400;
+    color: #777777;
+    margin-bottom: 50px;
+}
+
+.category {
+    display: flex;
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+.category.hide {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.category h2{
+    font-size: 24px;
+    color: #111111;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+button {
+    font-size: 12px;
+    color: #999999;
+    font-weight: bold;
+    background: 0;
+    border: none;
+    cursor: pointer;
+}
+
+.visibility-content{
+    margin-bottom:  40px;
+    font-size: 18px;
+    height: 100%;
+    color: #444444;
+    line-height: 30px;
+}
+
+.visibility-content.hide {
+    opacity: 0;
+    height: 0;
+    visibility: hidden;
+}
+
+li {
+    padding-left: 5px;
+    margin-left: 30px;
+}
+

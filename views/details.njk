@@ -1,0 +1,47 @@
+{% extends "layout.njk" %}
+
+{% block head %}
+    <title>{{item.title}} - Foodfy</title>
+{% endblock head %}
+
+{% block content %}
+    <main id="racipe-details">
+
+        <div class="datail-header">
+            <img src="{{item.image}}" alt="Imagem de {{item.title}}">
+            <h1>{{item.title}}</h1>
+            <h5>por {{item.author}}</h5>
+        </div>
+
+        <article class="datail-content">
+
+            <div class="category">
+                <h2>Ingredientes</h2>
+                <button>ESCONDER</button>
+            </div>
+            <ul class="visibility-content">
+                {% for linha in item.ingredients %}
+                    <li>{{linha}}</li>
+                {% endfor %}
+            </ul>
+
+            <div class="category">
+                <h2>Modo de preparo</h2>
+                <button>ESCONDER</button>
+            </div>
+            <ul class="visibility-content">
+                {% for linha in item.ingredients %}
+                    <li>{{linha}}</li>
+                {% endfor %}
+            </ul>
+
+            <div class="category {{ 'hide' if not item.information }}">
+                <h2>Informações adicionais</h2>
+                <button>ESCONDER</button>
+            </div>
+            <p class="visibility-content">{{item.information}}</p>
+
+        </article>
+
+    </main>
+{% endblock content %}
